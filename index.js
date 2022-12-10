@@ -544,7 +544,7 @@ function checkUrlAvailability(botResponse, text_received) {
 }
 
 const bot = new ViberBot({
-	authToken: process.env.ACCESS_TOKEN,
+	authToken: '503c6f7dab67dfea-7587197d64c52591-e0080e2169ae3a2c',
 	name: "Angel",
 	avatar: "https://share.cdn.viber.com/pg_download?id=0-04-01-4e4c38874c91206b810b7ac639ca2a2bf81a28fac8f0194e349c58a0cb391169&filetype=jpg&type=icon" // It is recommended to be 720x720, and no more than 100kb.
 });
@@ -576,6 +576,6 @@ bot.getBotProfile().then(response => console.log(`Bot Named: ${response.name}`))
 
 // Server
     const https = require('https');
-    const port = process.env.PORT;
-    const webhookUrl = process.env.WEBHOOK_URL;
-    https.createServer(bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
+    const port = 8080;
+    const webhookUrl = 'https://bot.condounit.homes/viber/webhook';
+    https.createServer("/viber/webhook",bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
