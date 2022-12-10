@@ -1,0 +1,15 @@
+{
+  "name": "viber-chatbot",
+  "version": "1.0.0",
+  "description": "Created for property sales",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kor Gelo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "viber-bot": "^1.0.18"
+  }
+}
